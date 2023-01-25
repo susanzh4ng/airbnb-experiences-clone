@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+* {
+  margin: 0px;
+  font-family: 'Poppins', sans-serif;
+}
+section {
+  padding: 20px;
+}
+.gray {
+  color: #918E9B;
+  padding: 0px 3px;
+}
+.bold {
+  font-weight: 600;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navBar {
+  height: 30px;
+  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 20px 36px;
+}
+.navLogo {
+  height: 25px;
+  width: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.HeroSection {
+  padding: 36px;
+  display: flex;
+  flex-direction: column; /*images are centered whereas text is left-bound*/
+}
+.heroImages {
+  max-width: 400px;
+  align-self: center;
+  margin-bottom: 25px;
+}
+.heroesBold {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 110%;
+}
+.heroesReg {
+  margin-top: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 110%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cardsList {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+}
+.CardSection {
+  position: relative;
+  width: 175px;
+  font-size: 12px;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
+}
+.cardImage {
+  width: 100%;
+  padding-bottom: 1px;
+}
+.cardBadge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: 400;
+  color: black;
+  background-color: white;
+}
+.cardStat {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.cardTitle{
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cardPrice {
+  margin-top: auto;
+}
+.starImage {
+  width: 14px;
+  height: auto;
+  padding-right: 5px;
 }

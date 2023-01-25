@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/NavBar';
+import Hero from './components/Hero';
+import Card from './components/Card';
+import airbnbData from './airbnbData';
 
+//{...card} spreads all the items of the card object into props
 function App() {
+  const cardElements = airbnbData.map(card => {
+    return (<Card
+      key={card.id}
+      {...card}
+      />)
+  })
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <Hero /> 
+      <section className="cardsList">
+        {cardElements}
+      </section>
     </div>
   );
 }
